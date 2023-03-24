@@ -11,12 +11,16 @@ namespace _360Widgets
     {
         public static string EvaluateLogFile(string strInput)
         {
-            if (strInput.Length > 0)
+            if (strInput.Length > 2)
             {
                 string[] lines = strInput.Split("\n");
                 Dictionary<string, string> output = new Dictionary<string, string>();
                 InputModelText input = new InputModelText();
                 CreateInputModel(ref input, lines);
+                if (string.IsNullOrEmpty(input.Reference))
+                {
+                    return "";
+                }
                 GenerateOutputText(input, ref output);
                 return JsonConvert.SerializeObject(output).ToString();
             }

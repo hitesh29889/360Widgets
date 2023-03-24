@@ -1,0 +1,5 @@
+C:\git-hub\360WidgetsTests\obj\Release\net5.0\360WidgetsTests.csprojAssemblyReference.cache
+C:\git-hub\360WidgetsTests\obj\Release\net5.0\360WidgetsTests.GeneratedMSBuildEditorConfig.editorconfig
+C:\git-hub\360WidgetsTests\obj\Release\net5.0\360WidgetsTests.AssemblyInfoInputs.cache
+C:\git-hub\360WidgetsTests\obj\Release\net5.0\360WidgetsTests.AssemblyInfo.cs
+C:\git-hub\360WidgetsTests\obj\Release\net5.0\360WidgetsTests.csproj.CoreCompileInputs.cache
