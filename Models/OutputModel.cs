@@ -9,4 +9,9 @@ namespace _360Widgets.Models
     {
         public Dictionary<string, string> Output { get; set; } = new Dictionary<string, string>();
     }
+
+    public class OutputModelText
+    {
+        public Dictionary<string, string> Output { get; set; } = new Dictionary<string, string>();
+    }
 }

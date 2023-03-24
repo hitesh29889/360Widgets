@@ -13,9 +13,13 @@ namespace _360Widgets
     {
         public static void Main(string[] args)
         {
+            EvaluateLogFile(string.Join("\n", args));
             CreateHostBuilder(args).Build().Run();
         }
-
+        public static string EvaluateLogFile(string logContentsStr)
+        {
+            return ProcessLogFiles.EvaluateLogFile(logContentsStr);
+        }
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
