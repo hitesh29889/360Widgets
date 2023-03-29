@@ -18,7 +18,6 @@ namespace _360WidgetsTests
             //Assert
             Assert.Equal("", output);
         }
-
         [Fact]
         public void CorrectInputTest()
         {
@@ -32,7 +31,6 @@ namespace _360WidgetsTests
             //Assert
             Assert.Equal("{\"temp-1\":\"UltraPrecise\",\"temp-2\":\"UltraPrecise\",\"hum-1\":\"Keep\",\"hum-2\":\"Discard\",\"mon-1\":\"Keep\",\"mon-2\":\"Keep\"}", output);
         }
-
         [Fact]
         public void FileHaveJustThermometer()
         {
@@ -85,6 +83,17 @@ namespace _360WidgetsTests
             //Assert
             Assert.Equal("", output);
         }
-    }
+        [Fact]
+        public void LargeInputTest() {
+            //Arrange
+            string[] lines = System.IO.File.ReadAllLines("../../../LargeInput.txt");
+            string InputString = string.Join("\n", lines);
 
+            //Act
+            string output = _360Widgets.ProcessLogFiles.EvaluateLogFile(InputString);
+
+            //Assert
+            Assert.Equal("{\"temp-1\":\"UltraPrecise\",\"temp-2\":\"UltraPrecise\"}", output);
+        }
+    }
 }
